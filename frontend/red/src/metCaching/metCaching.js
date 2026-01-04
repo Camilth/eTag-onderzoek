@@ -1,10 +1,9 @@
 import {LitElement, html, css} from 'lit'
 import {cardCss} from "../css/card-css.js";
 import {addProduct, fetchProducts} from "../services/productService.js";
-import {scrollableListCss} from "@/css/scrollableListCss.js";
 
 export class metCaching extends LitElement {
-    static styles = [cardCss, scrollableListCss];
+    static styles = [cardCss];
 
     static properties = {
         cachedProducts: { type: Array },
@@ -40,9 +39,7 @@ export class metCaching extends LitElement {
           <h1>Met Caching</h1>
           <button @click=${() => this.loadProducts()}>Call</button> 
           <button @click=${() => this.addProduct("RandomProduct")}>Voeg product toe</button>
-          <ul class="scrollable-list">
-              ${this.cachedProducts.map(p => html`<li>${p}</li>`)}
-          </ul>
+          <p>Aantal producten: ${this.cachedProducts.length}</p>
           <p class="time">Calltijd: ${this.fetchTime}ms</p>
       </section>
     `
