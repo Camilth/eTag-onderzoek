@@ -1,20 +1,26 @@
 import {LitElement, html, css} from 'lit'
 import {cardCss} from "../css/card-css.js";
+import {fetchProducts} from "../services/productService.js";
+import {scrollableListCss} from "@/css/scrollableListCss.js";
 
 export class metCaching extends LitElement {
-    static styles = [cardCss]
+    static styles = [cardCss, scrollableListCss];
 
     static properties = {
-        cachedData: { type: String }
+        cachedProducts: { type: Array }
     };
 
     constructor() {
         super();
-        this.cachedData = this.getCachedData();
+        this.cachedProducts = [];
     }
 
-    getCachedData(){
-        return "test"
+    firstUpdated() {
+        this.loadProducts();
+    }
+
+    async loadProducts() {
+        this.cachedProducts = await fetchProducts();
     }
 
   render() {
@@ -22,7 +28,9 @@ export class metCaching extends LitElement {
       <section>
           <h1>Met Caching</h1>
           <button>Test</button>
-          <p>${this.cachedData}</p>
+          <ul class="scrollable-list">
+              ${this.cachedProducts.map(p => html`<li>${p}</li>`)}
+          </ul>
       </section>
     `
   }
