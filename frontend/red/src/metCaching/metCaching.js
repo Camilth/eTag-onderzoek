@@ -9,7 +9,6 @@ export class metCaching extends LitElement {
     static properties = {
         cachedProducts: { type: Array },
         fetchTime: { type: Number },
-        ETag: { type: String}
     };
 
     constructor() {
@@ -27,7 +26,6 @@ export class metCaching extends LitElement {
         if (products) {
             this.cachedProducts = products;
         }
-
         this.fetchTime = duration;
     }
 

@@ -17,7 +17,7 @@ export async function fetchProducts(eTag) {
     const duration = Math.round(end - start);
 
     if (result.status === 304) {
-        return { products: null, duration,  }
+        return { products: null, duration };
     }
     else if (!result.ok) throw new Error('Failed to fetch products' + result.status);
 
