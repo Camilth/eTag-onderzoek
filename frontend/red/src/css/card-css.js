@@ -18,6 +18,12 @@ export const cardCss = css`
         border: 2px solid red;
         padding: 10rem;
     }
+    
+    .time {
+        display: flex;
+        justify-content: center;
+        border: 1px white solid;
+    }
 
 
 `

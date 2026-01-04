@@ -10,7 +10,7 @@ public class ProductService {
     private final List<String> products = new ArrayList<>();
 
     public ProductService() {
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             products.add("Banaan " + i);
         }
     }

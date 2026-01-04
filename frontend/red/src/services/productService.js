@@ -19,7 +19,7 @@ export async function addProduct(productName) {
     const result = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({productName})
+        body: productName
     })
     if (!result.ok) throw new Error('Failed to add products' + result.status);
     return result.json();
