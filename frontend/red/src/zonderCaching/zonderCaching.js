@@ -21,7 +21,10 @@ export class zonderCaching extends LitElement {
     }
 
     async loadProducts() {
-        const { products, duration} = await fetchProducts();
+        const startTime = performance.now();
+        const { products} = await fetchProducts(true);
+        const endTime = performance.now();
+        const duration = (endTime - startTime).toFixed(2);
 
         if (products) {
             this.cachedProducts = products;
