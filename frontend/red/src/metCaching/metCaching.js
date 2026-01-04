@@ -2,7 +2,6 @@ import {LitElement, html, css} from 'lit'
 import {cardCss} from "../css/card-css.js";
 import {addProduct, fetchProducts} from "../services/productService.js";
 import {scrollableListCss} from "@/css/scrollableListCss.js";
-import {virtualizer} from '@lit-labs/virtualizer';
 
 export class metCaching extends LitElement {
     static styles = [cardCss, scrollableListCss];
