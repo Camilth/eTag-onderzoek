@@ -16,9 +16,17 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<String>> getAllProducts() {
+    public ResponseEntity<List<String>> getAllProducts(@RequestHeader(value = "If-None-Match", required = false) String ifNoneMatch) {
+
         List<String> products = productService.getProducts();
-        return ResponseEntity.ok(products);
+
+        String currentVersion = String.valueOf(productService.getVersion());
+
+        if (currentVersion.equals(ifNoneMatch)) {
+            return ResponseEntity.status(304).build();
+        }
+
+        return ResponseEntity.ok().eTag(currentVersion).body(products);
     }
 
     @PostMapping
