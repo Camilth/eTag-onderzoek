@@ -20,7 +20,13 @@ export class metCaching extends LitElement {
     }
 
     async loadProducts() {
-        this.cachedProducts = await fetchProducts();
+        const { products, duration} = await fetchProducts();
+
+        if (products) {
+            this.cachedProducts = products;
+        }
+
+        this.fetchTime = duration;
     }
 
   render() {
@@ -31,6 +37,7 @@ export class metCaching extends LitElement {
           <ul class="scrollable-list">
               ${this.cachedProducts.map(p => html`<li>${p}</li>`)}
           </ul>
+          <p>${this.fetchTime}</p>
       </section>
     `
   }
