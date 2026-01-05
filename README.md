@@ -27,3 +27,11 @@ De custom eTag logica bevindt zich in ProductController.java. Je hebt een Reques
 #### Bronnen:
 1. https://www.baeldung.com/etags-for-rest-with-spring
 2. https://docs.spring.io/spring-framework/reference/web/webmvc/filters.html#filters-shallow-etag
+3. https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag
+4. https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching
+5. https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests
+6. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/filter/ShallowEtagHeaderFilter.html
+7. https://www.youtube.com/watch?v=Cy2ZJOBgk84
+
+Voor het laten zien van performance:
+* https://developer.mozilla.org/en-US/docs/Web/API/Performance
