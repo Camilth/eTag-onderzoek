@@ -1,6 +1,6 @@
 ### Inleiding
 
-Dit project laat zien hoe je caching kan toevoegen aan een applicatie. Het gaat hier dan specifiek om code die je toevoegt aan de backend. Dit kan je api calls 2+ keer sneller maken.
+Dit project laat zien hoe je caching kan toevoegen aan een applicatie. Het gaat hier dan specifiek om code die je toevoegt aan de backend. Deze demo laat zien hoe je door middel van eTags de responsetijd van API-calls kan verlagen.
 
 ### Frontend draaien
 
