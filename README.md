@@ -32,6 +32,11 @@ De custom eTag logica bevindt zich in ProductController.java. Je hebt een Reques
 5. https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests
 6. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/filter/ShallowEtagHeaderFilter.html
 7. https://www.youtube.com/watch?v=Cy2ZJOBgk84
+8. https://web.dev/articles/http-cache
 
 Voor het laten zien van performance:
 * https://developer.mozilla.org/en-US/docs/Web/API/Performance
+
+Naar gekeken en onderzoek naar gedaan maar niet gebruikt:
+* https://redis.io/
+* 
