@@ -1,9 +1,9 @@
 import {LitElement, html, css} from 'lit'
-import {cardCss} from "../css/card-css.js";
+import {cardWithCss} from "../css/cardWith.css.js";
 import {addProduct, fetchProducts} from "../services/productService.js";
 
 export class metCaching extends LitElement {
-    static styles = [cardCss];
+    static styles = [cardWithCss];
 
     static properties = {
         cachedProducts: { type: Array },

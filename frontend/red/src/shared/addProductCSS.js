@@ -12,11 +12,9 @@ export const AddProductCSS = css`
     button {
         padding: 1rem 2rem;
         font-size: 1.2rem;
-    }
-    
-    section {
-        border: 2px solid red;
-        padding: 1rem;
+        border-radius: 0.8rem;
+        border: none;
+        background: linear-gradient(to right, var(--primary-color-without-cache), var(--primary-color-with-cache));
     }
     
     .time {

@@ -1,9 +1,9 @@
 import {LitElement, html, css} from 'lit'
-import {cardCss} from "../css/card-css.js";
 import {addProduct, fetchProducts} from "../services/productService.js";
+import {cardWithoutCss} from "@/css/cardWithout.css.js";
 
 export class zonderCaching extends LitElement {
-    static styles = [cardCss];
+    static styles = [cardWithoutCss];
 
     static properties = {
         cachedProducts: { type: Array },
@@ -41,11 +41,13 @@ export class zonderCaching extends LitElement {
 
     render() {
         return html`
-      <section>
+      <section class="wrapper">
           <h1>Zonder Caching</h1>
           <button @click=${() => this.loadProducts()}> [ CALL ]</button> 
+          <section class="summary">
           <p>Aantal producten: ${this.cachedProducts.length}</p>
           <p class="time">Calltijd: ${this.fetchTime}ms</p>
+          </section>
       </section>
     `
     }
